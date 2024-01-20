@@ -343,7 +343,7 @@
         padding-left: 110px;
     }
 
-    .box2_item p, .box3__item p{
+    .box2_item p, .box3__item p,.box1__item p{
         font-size: 10px;
     }
 }
