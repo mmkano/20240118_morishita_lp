@@ -31,6 +31,8 @@
     color: 	#999;
 }
 
+
+/*firstview*/
 .firstview__content{
     position: relative;
     display: grid;
@@ -77,98 +79,86 @@
     line-height: 30px;
 }
 
-
-.news__content{
-    display: grid;
-    grid-template-columns: 0.6fr 2fr 1fr;
+/*ニュース*/
+.news {
+    padding: 50px 0;
 }
 
-.news__content p,h2,ul{
-    grid-column: 2/3;
+
+.inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 65px 0 100px;
 }
 
-.news__content h2{
-    margin-bottom: 40px;
+.inner h2{
     font-size: 30px;
     color: #999;
-
+    padding-left: 110px;
+    padding-bottom: 30px;
 }
 
-#news-ttl  {
+.news-ttl p{
     color: #B31767;
     font-size: 15px;
-    margin-bottom: 15px;
     font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 15px;
+    padding-left: 110px;
 }
 
-.news-list{
-    list-style: none outside;
-    margin: 0;
-    padding: 0;
+
+.sub_ttl {
+    font-size: 30px;
+    padding-left: 120px;
+    margin-bottom: 40px;
+    }
+
+.news_list {
+    margin: 0 10%;
     padding-bottom: 20px;
-    border-bottom: 3px solid #CCC;
-    margin-bottom: 50px;
+    border-bottom: 3px solid #ccc;
 }
-.news-list .item a{
-    display: flex;
-    flex-wrap: wrap;
-    flex-wrap: nowrap;
+
+.news_list_item{
+    list-style: none;
+}
+
+.news_list_item a{
     text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid #CCC;
-    padding: 20px 20px;
+    color: #999;
 }
-.news-list .item:first-child a{
+
+.news_list_item {
+    padding: 25px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.news_list_item:first-child {
     border-top: 3px solid #CCC;
-    padding-top: 30px;
+    padding-top: 35px;
+}
+.news_list_item a {
+    position: relative;
+    display: flex;
+    padding-right: 30px;
 }
 
-.news-list .item .date{
-    margin: 0;
-    min-width: 140px;
-    font-size: 16px;
-    color: #999;
-    padding: 0 20px 0 0;
+.news_list_date {
+    font-size: 15px;
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
 }
-.news-list .item .category{
-    margin: 0;
-    min-width: 140px;
-    padding: 0 20px 0 0;
-}
-.news-list .item .category span{
-    background: #B31767;
+
+.news_item {
     color: #FFF;
+    background: #BF186C;
+    border-radius: 14px;
+    width: 6em;
     text-align: center;
-    display: inline-block;
-    padding: 5px 20px;
-    font-size: 12px;
-    line-height: 1;
-    border-radius: 20px;
-}
-.news-list .item .title{
-    margin: 0;
-    width: 100%;
-}
-.news-list .item a:hover .title{
-    color: #B31767;
+    margin: 0 25px;
 }
 
-.news-list .item p{
-    color: #999;
-}
-
-
-/*@media screen and (max-width: 767px){
-.news-list .item a{
-    flex-wrap: wrap;
-}
-.news-list .item .date{
-    min-width: 100px;
-}
-.news-list .item .title{
-    margin-top: 10px;
-}
-}*/
 
 @media (max-width: 1000px) {
     .news-list {
@@ -184,8 +174,14 @@
         justify-content: space-between;
         margin-bottom: 10px;
     }
+
+    .news-ttl h2 , .news-ttl p{
+        padding-left: 80px;
+    }
 }
 
+
+/*About*/
 .about{
     background: #F5F5F5;
 }
@@ -233,6 +229,8 @@
     width: 100%;
 }
 
+
+/*サービス*/
 .service {
     margin: 100px;
 }
@@ -258,12 +256,6 @@
     padding: 30px 80px;
 }
 
-/*@media screen and (max-width:1350px){
-    .service__box{
-        display:flow;
-    }
-}*/
-
 .box1{
     grid-column: 1/2;
     grid-row: 1/3;
@@ -276,7 +268,6 @@
 }
 
 .box1__item{
-    width: 400px;
     padding:10px 70px ;
 }
 
@@ -347,124 +338,17 @@
     line-height: 30px;
 }
 
-.company__content{
-    position: relative;
-    padding: 70px 0 50px;
+@media screen and (max-width:1000px){
+    .box1__img img{
+        padding-left: 110px;
+    }
+
+    .box2_item p, .box3__item p{
+        font-size: 10px;
+    }
 }
 
-.company__content p{
-    position: absolute;
-    left: 20%;
-    font-size: 15px;
-    color: #B31767;
-    font-family: 'Gloria Hallelujah', cursive;
-}
-
-.company__content h2{
-    position: absolute;
-    left: 20%;
-    bottom: -10px;
-    font-size: 30px;
-    color: #999;
-}
-
-table {
-    margin: 50px auto 70px;
-    width: 60%;
-    border-collapse: collapse;
-}
-table th,
-table td {
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-table th {
-    font-weight: bold;
-    background-color:#F5F5F5;
-    text-align: left;
-}
-
-.recruitment__content{
-    display: flex;
-}
-
-.item__img{
-    position: relative;
-    width: 100%;
-}
-
-.item__img img{
-    width: 100%;
-}
-
-.item__img h2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.item__img a{
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-}
-
-/*.footer__top{
-    position: relative;
-}*/
-.footer__top p{
-    text-align: center;
-    margin-top: 50px;
-    font-weight: bold;
-    color: #999;
-}
-
-.footer__top p::after{
-    display: block;
-    content: "";
-    height: 40px;
-    width: 2px;
-    margin-left: 50%;
-    margin-top: 30px;
-    background-color: #B31767;
-
-}
-
-.footer__btn {
-    width: 200px;
-    padding: 30px ;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    background: linear-gradient(90deg, 	#EB1D86, #BF186C);
-    text-align: center;
-    box-shadow: 0 10px 0 #840152;
-    margin:20px auto 50px ;
-    display:block;
-    position: relative;
-}
-
-
-
-.footer__btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    background: url(../img/mailicon.svg) no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    transform: translateY(-50%);
-}
-
-.footer__bottom{
-    background: #F5F5F5;
-    text-align: center;
-    padding: 30px;
-}
-
+/*ブログ*/
 .blog{
     background: #F5F5F5;
     padding: 100px;
@@ -550,7 +434,6 @@ table th {
     }
   }
 
-
 .tag {
     font-size: 14px;
     display: flex;
@@ -568,66 +451,124 @@ table th {
     display:block;
 }
 
+/*会社概要*/
 
-
-
-.news {
-    padding: 50px 0;
+.company__content{
+    position: relative;
+    padding: 70px 0 50px;
 }
 
-
-.inner {
-    width: 80%;
-    margin: 0 auto;
-    padding: 65px 0 100px;
+.company__content p{
+    position: absolute;
+    left: 20%;
+    font-size: 15px;
+    color: #B31767;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
-
-.sub_ttl {
+.company__content h2{
+    position: absolute;
+    left: 20%;
+    bottom: -10px;
     font-size: 30px;
-    text-align: center;
-    margin-bottom: 40px;
-    }
-
-.news_list {
-    margin: 0 5%;
-}
-
-.news_list_item{
-    list-style: none;
-}
-
-.news_list_item a{
-    text-decoration: none;
     color: #999;
 }
-    
-    .news_list_item {
-    padding: 25px 0;
-    border-bottom: 1px solid #E6E6E6;
-    }
-    
-    .news_list_item:first-child {
-    border-top: 1px solid #E6E6E6;
-    }
-    .news_list_item a {
+
+table {
+    margin: 50px auto 70px;
+    width: 60%;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+table th {
+    font-weight: bold;
+    background-color:#F5F5F5;
+    text-align: left;
+}
+
+.recruitment__content{
+    display: flex;
+}
+
+.item__img{
     position: relative;
-    display: flex;
-    padding-right: 30px;
-    }
-    
-    .news_list_date {
-    font-size: 15px;
-    display: flex;
-    margin-right: 15px;
-    align-items: center;
-    }
-    
-    .news_item {
-    color: #FFF;
-    background: #BF186C;
-    border-radius: 14px;
-    width: 6em;
+    width: 100%;
+}
+
+.item__img img{
+    width: 100%;
+}
+
+.item__img h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item__img a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+/*footer*/
+.footer__top p{
     text-align: center;
-    margin-left: 20px;
-    }
+    margin-top: 50px;
+    font-weight: bold;
+    color: #999;
+}
+
+.footer__top p::after{
+    display: block;
+    content: "";
+    height: 40px;
+    width: 2px;
+    margin-left: 50%;
+    margin-top: 30px;
+    background-color: #B31767;
+
+}
+
+.footer__btn {
+    width: 200px;
+    padding: 30px ;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    background: linear-gradient(90deg, 	#EB1D86, #BF186C);
+    text-align: center;
+    box-shadow: 0 10px 0 #840152;
+    margin:20px auto 50px ;
+    display:block;
+    position: relative;
+}
+
+
+
+.footer__btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    background: url(../img/mailicon.svg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+}
+
+.footer__bottom{
+    background: #F5F5F5;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
